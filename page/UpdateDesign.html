@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../asserts/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="../asserts/css/fontawesome.css">
+</head>
+
+<style>
+    form{
+        /*font-family: "Times New Roman";*/
+    }
+    [contentEditable=true]:empty:not(:focus):before{
+        content:attr(data-text);
+        color: #a9a9a9;
+        -webkit-text-security:none;
+        font-family: "Times New Roman";
+    }
+    #passworddiv{
+        font:small-caption;
+        font-size: 16px;
+        /*-webkit-text-security: disc !important;*/
+    }
+    #passworddiv[contentEditable=true]:not(:empty){
+        font:small-caption;
+        font-size: 16px;
+        font:small-caption;
+        -webkit-text-security: disc !important;
+    }
+
+    [contenteditable="true"].single-line {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    [contenteditable="true"].single-line br {
+        display:none;
+
+    }
+    [contenteditable="true"].single-line * {
+        display:inline;
+        white-space:nowrap;
+    }
+
+</style>
+<body>
+
+<div class="container">
+    <h2>Stacked form</h2>
+    <form>
+        <div class="form-group">
+            <label for="emaildiv">Email address</label>
+            <div class="row">
+                <div class="col-10">
+                    <div id="emaildiv" data-text="Enter Email" class="form-control single-line" contenteditable="false" style="height: 38px;padding-left: 12px">example@gmail.com</div>
+                </div>
+                <div class="col-2" id="email" style="padding-top: 8px">
+                   <i class="fa fa-edit"></i>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="namediv">User Name</label>
+            <div class="row">
+                <div class="col-10">
+                    <div id="namediv" data-text="Enter UserName" class="form-control single-line" contenteditable="false" style="height: 38px;padding-left: 12px">Example</div>
+                </div>
+                <div class="col-2" id="name" style="padding-top: 8px">
+                    <i class="fa fa-edit"></i>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="passworddiv">Password</label>
+            <div class="row">
+                <div class="col-10">
+                    <div id="passworddiv" oninput="input_to_bullets(this)" data-text="Enter Password" class="form-control single-line" contenteditable="false" style="height: 38px;padding-left: 12px"></div>
+                </div>
+                <div class="col-2" id="password" style="padding-top: 8px">
+                    <i class="fa fa-edit"></i>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        var IDs = [];
+        var editableIdContain = "div";
+        var editableList = null;
+        $("form").find("div").each(function(){
+            if(this.id) {
+                var hasKeyWord =this.id.includes(editableIdContain)
+                if(hasKeyWord) {
+                    IDs.push(this.id);
+                }
+            }
+        });
+        console.log(IDs);
+
+        $(".fa-edit").click(function(){
+            var pid = $(this).parent().attr("id");
+            pid = `#${pid}div`;
+
+            $(pid).attr("contenteditable","true");
+            $(pid).focus()
+        });
+    });
+
+    function input_to_bullets (el) {
+        if (! el.input_pw) {
+            el.input_pw = '';
+        }
+        var val = el.value;
+        var len = val.length;
+        var chr = val.substr (len - 1);
+        if (chr != "•") {
+            el.input_pw += chr;
+        } else {
+            el.input_pw = el.input_pw.substr (0, len);
+        }
+        el.value = el.value.replace (/./g, "•");
+    }
+</script>
+</body>
+</html>
