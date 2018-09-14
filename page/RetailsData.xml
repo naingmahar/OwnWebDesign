@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <page id="1">
+        <title>Main Functions</title>
+        <img>image003.png</img>
+        <description>
+            <li>This is the main screen of the application.</li>
+            <li>The entry point to the other functionalities that supported by the application.</li>
+        </description>
+        <instruction></instruction>
+        <function>
+            <li>Create new brand</li>
+            <li>Create new outlet</li>
+            <li>Record the outlet purchase transition</li>
+            <li>Export purchase history</li>
+            <li>Import Brand</li>
+            <li style="color: red">Import or export outlet data</li>
+        </function>
+    </page>
+
+    <page id="2">
+        <title>Create New Brand</title>
+        <img>image009.png</img>
+        <description>
+            <li>This is the screen for creating new brand.</li>
+            <li>There are three input fields and all fields are mandatory.</li>
+            <li>The back key is used to go back to main screen.</li>
+        </description>
+        <instruction>
+            <li>Home => Brand => “+” Icon</li>
+        </instruction>
+        <function>
+            <li>Fill data for brand name, brand price and brand code.</li>
+            <li>Click “Create Brand” to create new one.</li>
+            <li>The new brand is created and shown in brand list.</li>
+        </function>
+    </page>
+
+    <page id="3">
+        <title>Update Existing Brand</title>
+        <img>image010.png</img>
+        <description>
+            <li>This is the screen for creating new brand.</li>
+            <li>There are three input fields and all fields are mandatory.</li>
+            <li>The back key is used to go back to main screen.</li>
+        </description>
+        <instruction>
+            <li>Home =&gt; Outlet =&gt; “+” Icon</li>
+        </instruction>
+        <function>
+            <li>Modify the desired fields with new data.</li>
+            <li>Click “Update Brand” to update the brand data.</li>
+            <li>The selected brand is modified with new input data and shown in brand list.</li>
+            <li>When back button is clicked, the application go back to brand list.</li>
+        </function>
+    </page>
+    <page id="4">
+        <title>Create New Outlet/ Modify Existing Outlet</title>
+        <img>image008.png</img>
+        <description>
+            <li>This is the screen for creating new shop.</li>
+            <li>The fields with * are mandatory and other are optional.</li>
+            <li>Outlet image can be set choosing from image gallery or taking new photo if desired.</li>
+            <li>The back key is used to go back to main screen.</li>
+        </description>
+        <instruction>
+            <li>Home =&gt; Outlet =&gt; “+” Icon</li>
+        </instruction>
+        <function>
+            <li>Fill all mandatory fields.</li>
+            <li>Click “Create Shop” to create new one.</li>
+            <li>The new outlet is created and shown in outlet list.</li>
+        </function>
+    </page>
+
+    <page id="5">
+        <title>Create Outlet Record</title>
+        <img>image012.png</img>
+        <description>
+            <li>This is the screen for creating outlet purchase transition.</li>
+            <li>This include three disable fields that are autocompleted by the application.</li>
+            <li>The other active fields are needed to enter the data by user.</li>
+        </description>
+        <instruction>
+            <li>Home =&gt; Outlet Records =&gt; Select outlet name =&gt; “+” Icon =&gt; “+” Icon =&gt; Select brand name =&gt; Click the brand name’s row</li>
+        </instruction>
+        <function>
+            <li>Fill the required field data</li>
+            <li>Click “Update” to record the purchase data.</li>
+            <li>Click “Update” to record the purchase data.</li>
+            <li>Click YES to confirm or NO to cancel.</li>
+            <li>After confirmation the data is recorded and shown in specific brand name row.</li>
+        </function>
+    </page>
+
+    <page id="6">
+        <title>Update / Delete Outlet Record</title>
+        <img>image013.png</img>
+        <description>
+            <li>This is the screen for updating and deleting outlet record.</li>
+            <li>Can modify the existing data or delete the record.</li>
+        </description>
+        <instruction>
+            <li>Home =&gt; Outlet Records =&gt; Select outlet name =&gt; Select outlet record by date =&gt; Click the brand name’s row</li>
+        </instruction>
+        <function>
+            <li>Click the update button to modify the record data.</li>
+            <li>Click the delete icon on the top right corner of the screen.</li>
+            <li>After modification the existing record are shown in outlet record list.</li>
+        </function>
+    </page>
+    <page id="7">
+        <title>Export Data</title>
+        <img>image014.png</img>
+        <description>
+            <li>This is the screen for exporting record data.</li>
+            <li>The record data can be exported by date range or shop
+                name in two ways.</li>
+        </description>
+        <instruction>
+            <li>Home =&gt; Export Data</li>
+        </instruction>
+        <function>
+            <li>Choose date range option to export the date according
+                to the specified start date and end date.</li>
+            <li>Choose shop name option to export the data according
+                to the shop name.</li>
+        </function>
+    </page>
+    <page id="8">
+        <title>Export Data by Date Range</title>
+        <img>image015.png</img>
+        <description>
+            <li>This is the screen for exporting record data.</li>
+            <li>The record data can be exported by date range or shop
+                name in two ways.</li>
+        </description>
+        <instruction>
+            <li>Home =&gt; Export Data</li>
+        </instruction>
+        <function>
+            <li>Choose date range option to export the date according
+                to the specified start date and end date.</li>
+            <li>Choose shop name option to export the data according
+                to the shop name.</li>
+        </function>
+    </page>
+</root>

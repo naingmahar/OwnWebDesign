@@ -1,0 +1,17 @@
+:root{
+    --nav-color:#fff;
+    --nav-text-color:#091658;
+    --font-color: #0c5800;
+    --header-font-color:#091658;
+    --list-font-color:#fff;
+    --active-nav-text-bakground-color:rgba(0, 0, 0, 0.1);
+    --up-arrow-color:#0a0461;
+
+
+
+    --color-bar-1:#091658;
+    --color-bar-2:#0b3e1e;
+    --color-bar-3:#450c65;
+    --color-bar-4:#4b0c3f;
+    --color-bar-5:#510a1c;
+}
